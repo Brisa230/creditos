@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oaxaca</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #edit {
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Establece la posición relativa para el contenedor */
+        }
+
+        #primero,
+        #segundo {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            position: absolute; /* Establece la posición absoluta para ambas imágenes */
+        }
+
+        #segundo {
+            height: calc(80vh * 0.4); /* 30% más grande que el contenedor */
+            left: 23%; /* Centrado al 1/4 de la pantalla */
+            z-index: 1; /* Coloca la segunda imagen sobre la primera */
+        }
+    </style>
+</head>
+<body>
+    <div id="edit">
+        <img id="primero" src="maleta.png" alt="Maletas" >
+        <img id="segundo" src="A.jpg" alt="Edit 1" >
+    </div>
+    
+</body>
+</html>
